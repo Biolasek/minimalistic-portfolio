@@ -58,7 +58,7 @@ const Home: NextPage = () => {
             </div>
           ))}
         </div>
-        <div className="mt-5 mb-5 row">
+        <div className={`mt-5 mb-5 row ${styles.cardsContainer}`}>
           {repos?.length > 0 && (
             repos.map((repo: any, index: number) => (
               <a href={repo.html_url} target="_blank" rel="noreferrer" className={`${styles.cardBody} ${styles.reposPosition} col-xxl-2 col-lg-3 col-md-5 col-12 mb-3`} key={index}>

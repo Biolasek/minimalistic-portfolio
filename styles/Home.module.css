@@ -127,3 +127,9 @@
     text-align: start;
   }
 }
+
+@media (max-width: 575px) {
+  .cardsContainer {
+    padding: 0 1rem;
+  }
+}
