@@ -47,7 +47,7 @@ const Home: NextPage = () => {
     <div className="container">
       <main className={`mt-auto mb-auto ${styles.leftSlide}`}>
         <Link href="/">
-          <a><Image src="/logo.svg" alt="spcode.pl" height={50} width={180} priority /></a>
+          <a className={styles.logoPosition}><Image src="/logo.svg" alt="spcode.pl" height={50} width={180} priority /></a>
         </Link>
         <h1 className={`${styles.textBlack} mt-5 mb-0`}>Sebastian Podsiadły</h1>
         <p className={`${styles.textPosition} fw-bold text-uppercase`}>Junior Fullstack Developer</p>
