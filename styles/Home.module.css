@@ -1,0 +1,129 @@
+.textBlack {
+  font-weight: 900;
+}
+
+.textPosition {
+  font-size: 1.25rem;
+  padding: 0 2.5rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.textPosition::before {
+  content: '';
+  height: 2px;
+  width: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: var(--text-secondary);
+}
+
+.techImages {
+  margin: 0 .35rem;
+  opacity: .5;
+  transition: all .2s ease;
+}
+
+.techImages:hover {
+  opacity: 1;
+}
+
+.leftSlide {
+  animation: leftSlide 1.2s linear, fadeIn 2s linear;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.linksMargin:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.footerText {
+  text-align: end;
+  color: var(--text-secondary);
+}
+
+.footerText a {
+  color: var(--text-tertiary);
+}
+
+.footerText a:hover {
+  color: inherit;
+}
+
+.cardBody {
+  position: relative;
+  font-family: Consolas;
+  background-color: #fff;
+  border: 1px solid var(--text-primary);
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.cardBody::before {
+  content: '';
+  position: absolute;
+  bottom: -.6rem;
+  right: -.6rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background-color: var(--text-primary);
+  z-index: -1;
+  transition: all .5s ease;
+}
+
+.cardBody:hover::before {
+  bottom: 0;
+  right: 0;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.cardDescription {
+  color: var(--text-tertiary);
+}
+
+.reposPosition:not(:last-child) {
+  margin-right: 1rem;
+}
+
+@keyframes leftSlide {
+  from { transform: translateX(-5rem); }
+  to { transform: translateX(0); }
+} 
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+
+@media (max-width: 447px) {
+  .textPosition {
+    padding: 0;
+  }
+
+  .textPosition::before {
+    position: relative;
+    display: block;
+    height: 2px;
+  }
+}
+
+@media (max-width: 991px) {
+  .footerText a {
+    display: inline-block;
+  }
+
+  .footerText {
+    margin: 1rem 0 0;
+    text-align: start;
+  }
+}
